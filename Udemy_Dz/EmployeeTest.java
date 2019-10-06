@@ -15,8 +15,8 @@ class Employee {
         departmant = dep;
     }
     double salary_x2(double m){
-        double sal_x2 = m * 2;
-        return sal_x2;
+        salary *=  2;
+        return salary;
     }
 }
 

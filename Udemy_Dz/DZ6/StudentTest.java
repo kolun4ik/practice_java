@@ -7,6 +7,23 @@ class Student {
     double amount_econ;
     double amount_lang;
 
+    Student(int id1, String name1, String surname1, int course1, double math1, double econ1, double lang1) {
+        id_stud = id1;
+        name = name1;
+        surname = surname1;
+        course = course1;
+        amount_math = math1;
+        amount_econ = econ1;
+        amount_lang = lang1;
+    }
+
+    Student(int id2, String name2, String surname2, int course3){
+        this(id2, name2, surname2, course3, 0,0,0);
+    }
+
+    Student() {
+        this(0, null, null, 0, 0, 0,0);
+    }
     double amounts(double a, double b, double c) {
         double result = (a + b + c) / 3;
         return result;
@@ -25,23 +42,10 @@ public class StudentTest {
 
     public static void main(String[] args) {
         System.out.println("Test students class!");
-
-        Student st1 = new Student();
-        Student st2 = new Student();
+        Student st1 = new Student(1, "Pasha", "Koen", 4, 3,4,5);
+        Student st2 = new Student(2, "Ella", "Trics", 4);
         Student st3 = new Student();
 
-        st1.id_stud = 1;
-        st1.name = "Pasha";
-        st1.surname = "Koen";
-        st1.course = 4;
-        st1.amount_math = 3;
-        st1.amount_econ = 4;
-        st1.amount_lang = 5;
-
-        st2.id_stud = 2;
-        st2.name = "Ella";
-        st2.surname = "Trics";
-        st2.course = 4;
         st2.amount_math = 5;
         st2.amount_econ = 4;
         st2.amount_lang = 4;
